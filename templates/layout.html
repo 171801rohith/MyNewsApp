@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My News API</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Welcome TO MY NEWS APP</h1>
+    {%block content%}
+    <form action="/result" method="post">
+      <legend>What Do Want To Know About?</legend>
+      <fieldset>
+        <p>
+          <label>Query :</label> <input type="text" name="query" />
+        </p>
+        <button type="submit">submit</button>
+      </fieldset>
+    </form>
+    {%endblock content%}
+  </body>
+</html>
