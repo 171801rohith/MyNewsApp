@@ -1,9 +1,11 @@
-{%extends "layout.html"%}
-{%block content%}
-{%for article in news["articles"]%}
-    <div class="contents">
-      <div class="title">{{article["title"]}}</div>
-      <div class="description">{{article["description"]}}</div>
-    </div>
-{%endfor%}
-{%endblock content%}
+{%extends "layout.html"%} {%block content%} {%for article in news["articles"]%}
+<div class="contents">
+  <div class="image">
+    <a href="{{ article['url'] }}" target="_blank" rel="noopener noreferrer"
+      ><img src="{{article['urlToImage']}}" width="85%" height="50%"
+    /></a>
+  </div>
+  <div class="title">{{article["title"]}}</div>
+  <div class="description">{{article["description"]}}</div>
+</div>
+{%endfor%} {%endblock content%}

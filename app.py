@@ -12,7 +12,7 @@ app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
 
 def getDate():
-    return datetime.now().strftime("%Y-%D-%M")
+    return datetime.now().strftime("%Y-%d-%m")
 
 
 @app.route("/")
